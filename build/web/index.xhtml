@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Recept Admin Login</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2" columnClasses="" rowClasses="">
+                <h:outputLabel value="Användarnamn: " for="username" />
+                <h:inputText id="username" value="#{adminBean.username}" validatorMessage="You need to enter a username">
+                    <f:validateRequired />
+                </h:inputText>
+                <h:outputLabel value="Lösenord: " for="password" />
+                <h:inputSecret id="password" value="#{adminBean.password}" validatorMessage="You need to enter a password">
+                    <f:validateRequired />
+                </h:inputSecret>
+                <h:panelGroup />
+                <h:commandButton value="Logga in" action="#{adminBean.validateCredentials}" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
